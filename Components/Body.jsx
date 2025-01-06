@@ -1,21 +1,15 @@
 import React from "react";
 import ResCard from "./ResCard.jsx";
+import { resList } from "../list/resList.js";
 
 const Body = () => {
   return (
     <div className="body-container">
       <div className="search-container">Search</div>
       <div className="res-card-container">
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
-        <ResCard />
+        {resList.map((res, index) => (
+          <ResCard res={res} key={index} />
+        ))}
       </div>
     </div>
   );
