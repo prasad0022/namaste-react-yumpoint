@@ -7,8 +7,8 @@ const Body = () => {
     <div className="body-container">
       <div className="search-container">Search</div>
       <div className="res-card-container">
-        {resList.map((res, index) => (
-          <ResCard res={res} key={index} />
+        {resList.map((res) => (
+          <ResCard key={res.id} res={res} />
         ))}
       </div>
     </div>
