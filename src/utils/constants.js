@@ -1,0 +1,1 @@
+export const LOGO_URI = "https://thumbs.dreamstime.com/b/yum-text-speech-bubble-yummy-concept-design-doodle-print-yum-text-fruit-yummy-concept-design-doodle-print-169401585.jpg"

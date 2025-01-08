@@ -1,6 +1,6 @@
 import React from "react";
-import ResCard from "./ResCard.jsx";
-import { resList } from "../list/resList.js";
+import ResCard from "./ResCard";
+import { resList } from "../utils/mockData";
 
 const Body = () => {
   return (
