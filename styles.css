@@ -28,11 +28,18 @@
   border-radius: 10px;
 }
 
+.filter-btn {
+  height: 40px;
+  background-color: bisque;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .res-card-container {
   padding: 10px 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .res-card {

@@ -11,7 +11,7 @@ export const resList = [
         "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sidigb8zqjfrfpkrtqgl",
         "resName": "Sushi Palace",
         "cuisine": "Japanese",
-        "rating": 4.7
+        "rating": 3.7
     },
     {
         "id": 3,
@@ -25,7 +25,7 @@ export const resList = [
         "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sidigb8zqjfrfpkrtqgl",
         "resName": "Burger Shack",
         "cuisine": "American",
-        "rating": 4.2
+        "rating": 3.2
     },
     {
         "id": 5,
@@ -46,7 +46,7 @@ export const resList = [
         "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sidigb8zqjfrfpkrtqgl",
         "resName": "Parisian Delights",
         "cuisine": "French",
-        "rating": 4.6
+        "rating": 3.6
     },
     {
         "id": 8,
@@ -60,7 +60,7 @@ export const resList = [
         "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sidigb8zqjfrfpkrtqgl",
         "resName": "Lebanese Flavors",
         "cuisine": "Middle Eastern",
-        "rating": 4.4
+        "rating": 3.4
     },
     {
         "id": 10,
