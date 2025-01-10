@@ -1,24 +1,54 @@
+* {
+  font-family: "Sunflower", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
 .header {
+  margin: 0;
+  padding: 0 50px;
+  background-color: white;
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  z-index: 1000;
+  box-shadow: 0 15px 40px 0 rgba(40, 44, 63, 0.15);
+}
+
+.company-logo {
+  margin-left: 80px;
 }
 
 .company-logo > img {
-  margin: 5px;
-  margin-left: 40px;
   width: 100px;
 }
 
+.header-list {
+  margin-right: 80px;
+}
+
 .header-list > ul {
-  margin-right: 40px;
   display: flex;
   list-style: none;
 }
 
 .header-list > ul > li {
-  margin: 25px;
+  margin: 20px 25px;
+}
+
+.body-container {
+  margin-top: 120px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .search-container {
@@ -26,6 +56,11 @@
   padding: 10px;
   border: 1px solid gray;
   border-radius: 10px;
+}
+
+.filter-container {
+  padding: 10px;
+  padding-left: 40px;
 }
 
 .filter-btn {
@@ -40,6 +75,8 @@
   padding: 10px 30px;
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
 
 .res-card {

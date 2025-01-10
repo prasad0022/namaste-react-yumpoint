@@ -7,7 +7,8 @@ const Body = () => {
 
   return (
     <div className="body-container">
-      <div className="search-container">
+      <div className="search-container">Search</div>
+      <div className="filter-container">
         <button
           className="filter-btn"
           onClick={() => {
