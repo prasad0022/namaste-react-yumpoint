@@ -1,15 +1,16 @@
 import React from "react";
+import { RES_IMG_URI } from "../utils/constants";
 
 const ResCard = (props) => {
-  const { resName, cuisine, img, rating } = props.res;
+  const { name, cuisines, cloudinaryImageId, avgRating } = props.res;
 
   return (
     <div className="res-card">
-      <img src={img} alt="res-logo" />
+      <img src={RES_IMG_URI + cloudinaryImageId} alt="res-logo" />
       <div className="res-info">
-        <h3 className="res-name">{resName}</h3>
-        <h4 className="cuisine">{cuisine}</h4>
-        <h4 className="rating">{rating} ⭐</h4>
+        <h3 className="res-name">{name}</h3>
+        <h4 className="cuisine">{cuisines.join(", ")}</h4>
+        <h4 className="rating">{avgRating} ⭐</h4>
       </div>
     </div>
   );
