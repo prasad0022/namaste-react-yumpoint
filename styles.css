@@ -51,12 +51,13 @@ body {
   height: 40px;
   border: none;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 .login-btn:hover {
   border-radius: 10px;
-  background-color: rgb(232, 233, 235);
+  background-color: rgb(251, 112, 5);
+  color: white;
 }
 
 .body-container {
@@ -65,11 +66,46 @@ body {
   margin-right: 70px;
 }
 
-.search-container {
+/* Search v1 */
+/* .search-container {
   margin: 10px;
   padding: 10px;
   border: 1px solid gray;
   border-radius: 10px;
+  justify-content: space-between;
+} */
+
+/* Search v2 */
+.search-container {
+  margin-bottom: 20px;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  width: 800px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #555;
 }
 
 .filter-container {
@@ -78,6 +114,7 @@ body {
 }
 
 .filter-btn {
+  width: 180px;
   font-size: 15px;
   height: 40px;
   border: none;
@@ -86,7 +123,8 @@ body {
   list-style: lower-alpha;
 }
 .filter-btn:hover {
-  color: rgb(251, 112, 5);
+  background-color: rgb(251, 112, 5);
+  color: white;
 }
 
 .res-card-container {
