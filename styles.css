@@ -84,7 +84,7 @@ body {
   width: 250px;
   padding: 5px;
   border-radius: 10px;
-  background-color: rgb(227, 230, 232);
+  background-color: rgb(232, 233, 235);
 }
 
 .res-card:hover {
@@ -100,4 +100,62 @@ body {
 
 .res-info {
   margin: 10px;
+}
+
+.shimmer-card-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.shimmer-card {
+  position: relative;
+  -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(232, 233, 235);
+  border-radius: 6px;
+  height: 400px;
+  overflow: hidden;
+  width: 250px;
+  margin: 5px;
+  padding: 5px;
+
+  .shimmerBG {
+    background: #fff;
+    background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+    background-size: 1200px 100%;
+  }
+
+  .media {
+    border-radius: 10px;
+    height: 170px;
+  }
+
+  .p-32 {
+    padding: 15px;
+  }
+
+  .title-line {
+    height: 24px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 20px;
+  }
+
+  .content-line {
+    height: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+
+  .end {
+    width: 40%;
+  }
+}
+
+.m-t-24 {
+  margin-top: 24px;
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ResCard from "./ResCard";
+import ShimmerCard from "./ShimmerCard";
 
 const Body = () => {
   const [restaurantsList, setRestaurantsList] = useState([]);
@@ -35,11 +36,19 @@ const Body = () => {
           Top Rated Restaurants
         </button>
       </div>
-      <div className="res-card-container">
-        {restaurantsList.map((res) => (
-          <ResCard key={res.info.id} res={res.info} />
-        ))}
-      </div>
+      {restaurantsList.length === 0 ? (
+        <div className="shimmer-card-container">
+          {Array.from({ length: 8 }).map((_, index) => (
+            <ShimmerCard key={index} />
+          ))}
+        </div>
+      ) : (
+        <div className="res-card-container">
+          {restaurantsList.map((res) => (
+            <ResCard key={res.info.id} res={res.info} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
