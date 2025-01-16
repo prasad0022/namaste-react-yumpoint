@@ -5,6 +5,7 @@ import Search from "./Search";
 
 const Body = () => {
   const [restaurantsList, setRestaurantsList] = useState([]);
+  const [filterRestaurants, setFilterRestaurants] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -22,6 +23,7 @@ const Body = () => {
           ?.restaurants || [];
 
       setRestaurantsList(restaurants);
+      setFilterRestaurants(restaurants);
     } catch (error) {
       console.error(error);
     }
@@ -31,7 +33,7 @@ const Body = () => {
     const filterRes = restaurantsList.filter((res) =>
       res.info.name.toLowerCase().includes(serachString.toLowerCase())
     );
-    setRestaurantsList(filterRes);
+    setFilterRestaurants(filterRes);
   };
 
   return (
@@ -41,16 +43,16 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            const filterRes = restaurantsList.filter(
+            const filterRes = filterRestaurants.filter(
               (res) => res.info.avgRating >= 4
             );
-            setRestaurantsList(filterRes);
+            setFilterRestaurants(filterRes);
           }}
         >
           Top Rated Restaurants
         </button>
       </div>
-      {restaurantsList?.length === 0 ? (
+      {filterRestaurants?.length === 0 ? (
         <div className="shimmer-card-container">
           {Array.from({ length: 8 }).map((_, index) => (
             <ShimmerCard key={index} />
@@ -58,7 +60,7 @@ const Body = () => {
         </div>
       ) : (
         <div className="res-card-container">
-          {restaurantsList.map((res) => (
+          {filterRestaurants.map((res) => (
             <ResCard key={res.info.id} res={res.info} />
           ))}
         </div>
