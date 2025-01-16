@@ -18,7 +18,7 @@ const Body = () => {
       const jsonData = await data.json();
 
       const restaurants =
-        jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants || [];
 
       setRestaurantsList(restaurants);
@@ -27,15 +27,22 @@ const Body = () => {
     }
   };
 
+  const handleSearch = (serachString) => {
+    const filterRes = restaurantsList.filter((res) =>
+      res.info.name.toLowerCase().includes(serachString.toLowerCase())
+    );
+    setRestaurantsList(filterRes);
+  };
+
   return (
     <div className="body-container">
-      <Search />
+      <Search onSearch={handleSearch} />
       <div className="filter-container">
         <button
           className="filter-btn"
           onClick={() => {
             const filterRes = restaurantsList.filter(
-              (res) => res.info.avgRating >= 4.5
+              (res) => res.info.avgRating >= 4
             );
             setRestaurantsList(filterRes);
           }}

@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Search = () => {
+const Search = (props) => {
+  const [serachString, setSearchString] = useState("");
+
+  const handleChange = (e) => {
+    const val = e.target.value;
+    setSearchString(val);
+  };
+
   return (
     <div className="search-container">
       <input
+        name="serach-string"
         type="text"
         placeholder="Search for restaurants and food"
         className="search-input"
+        value={serachString}
+        onChange={handleChange}
       />
-      <button className="search-button">
+      <button
+        className="search-button"
+        onClick={() => {
+          props.onSearch(serachString);
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
