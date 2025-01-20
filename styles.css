@@ -228,3 +228,13 @@ body {
 .error-container {
   text-align: center;
 }
+
+.res-menu-container {
+  width: 900px;
+  margin-left: 20%;
+  padding: 10px 20px;
+}
+
+.res-menu {
+  padding: 0 20px;
+}

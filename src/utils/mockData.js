@@ -70,3 +70,41 @@ export const resList = [
         "rating": 4.5
     }
 ]
+
+export const resMenuData = [
+    {
+        id: 157431730,
+        isVeg: true,
+        name: "My Box - Veg",
+        defaultPrice: 24900,
+        description: "Serves 1 | 1 personal veg pizza, 2 pc garlic bread & 1 Pepsi PET ! For Meals, refer to the nutritional data for individual products."
+    },
+    {
+        id: 157431729,
+        isVeg: false,
+        name: "My Box - Non Veg",
+        defaultPrice: 31900,
+        description: "Serves 1 | 1 personal non veg pizza, 2 pc garlic bread & 1 Pepsi PET. For Meals, refer to the nutritional data for individual products."
+    },
+    {
+        id: 157431718,
+        isVeg: true,
+        name: "Hut Treat Meal for 2 - Veg",
+        defaultPrice: 52900,
+        description: "Serves 2 | 1 medium veg pizza upto signature, 1 classic bread stix, 1 Pepsi PET. For Meals, refer to the nutritional data for individual products."
+    },
+    {
+        id: 157431717,
+        isVeg: false,
+        name: "Hut Treat Meal for 2 - Non Veg",
+        defaultPrice: 58900,
+        description: "Serves 2 | 1 medium non-veg pizza upto signature, 1 classic bread stix, 1 Pepsi PET. For Meals, refer to the nutritional data for individual products."
+    },
+    {
+        id: 157431721,
+        isVeg: true,
+        name: "Hut Treat Meal for 4 - Veg",
+        defaultPrice: 85900,
+        description: "Serves 4 | Super saver meal combo @ 859 - 2 med veg pizza of choice, 2 classic bread stix, 2 Pepsi PET. For Meals, refer to the nutritional data for individual products."
+    },
+]
