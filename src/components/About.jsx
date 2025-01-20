@@ -1,7 +1,7 @@
 import React from "react";
 
 const About = () => {
-  return <div>About</div>;
+  return <div style={{ marginTop: "120px" }}>About</div>;
 };
 
 export default About;
