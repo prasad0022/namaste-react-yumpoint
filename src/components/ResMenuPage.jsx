@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ResMenu from "./ResMenu";
-import { resMenuData } from "../utils/mockData";
+import { useParams } from "react-router";
 
 const ResMenuPage = () => {
   const [resInfo, setResInfo] = useState(null);
-  const [resMenu, setResMenu] = useState(resMenuData);
+  const [resMenu, setResMenu] = useState(null);
+
+  const { resId } = useParams();
+  console.log(resId);
 
   useEffect(() => {
     fetchData();
@@ -12,17 +15,21 @@ const ResMenuPage = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.057437&lng=78.9381729&restaurantId=1003414&catalog_qa=undefined&submitAction=ENTER"
+      `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.057437&lng=78.9381729&restaurantId=${resId}`
     );
     const jsonData = await data.json();
 
     const resInfoData = jsonData?.data?.cards[2]?.card?.card?.info;
+    const resMenuData =
+      jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
+        ?.card?.card?.itemCards;
     setResInfo(resInfoData);
+    setResMenu(resMenuData);
   };
 
   return (
     <div className="res-menu-container" style={{ marginTop: "100px" }}>
-      {resInfo === null ? (
+      {resInfo === null && resMenu === null ? (
         <h1>Loading....</h1>
       ) : (
         <>
@@ -35,7 +42,7 @@ const ResMenuPage = () => {
           </div>
           <div className="menu-body">
             {resMenu.map((menu) => (
-              <ResMenu key={menu.id} menu={menu} />
+              <ResMenu key={menu.card.info.id} menu={menu.card.info} />
             ))}
           </div>
         </>

@@ -7,8 +7,8 @@ const ResMenu = ({ menu }) => {
       <div className="res-menu">
         {menu.isVeg ? <p>🟢</p> : <p>🔴</p>}
         <h2>{menu.name}</h2>
-        <h3>₹ {menu.defaultPrice / 100}</h3>
-        <p>{menu.description}</p>
+        {menu.price && <h3>₹ {menu.price / 100}</h3>}
+        <p>{menu.category}</p>
       </div>
     </div>
   );
