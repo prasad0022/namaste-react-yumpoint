@@ -108,3 +108,36 @@ export const resMenuData = [
         description: "Serves 4 | Super saver meal combo @ 859 - 2 med veg pizza of choice, 2 classic bread stix, 2 Pepsi PET. For Meals, refer to the nutritional data for individual products."
     },
 ]
+
+export const businessData = [
+    {
+        name: "Yumpoint Food",
+        logo: "🍔",
+        description: "On our Food Delivery marketplace, users can conveniently search and discover multiple restaurant listings, browse their menus, place food orders, pay seamlessly, and track order deliveries. These orders are received and prepared by our restaurant partners and delivered to users through the large fleet of delivery partners on our platform."
+    },
+    {
+        name: "Yumpoint Instamart",
+        logo: "🛒",
+        description: "On Instamart, users can access and browse a wide selection of grocery and household items.These orders are received by merchant partners, processed through our dark stores, and delivered to users through delivery partners."
+    },
+    {
+        name: "Yumpoint Dineout",
+        logo: "🍷",
+        description: "Dineout facilitates a user’s eating-out experience, through which users can discover restaurants, access menus and images, make reservations, benefit from attractive promotions, and make digital payments to such restaurants on our platform."
+    },
+    {
+        name: "Yumpoint Genie",
+        logo: "🧞",
+        description: "Genie is an on-demand product pick-up/ drop-off service for users. This service is availed by a user for sending a product from one point to another within a city."
+    },
+    {
+        name: "Yumpoint Minis",
+        logo: "🛍️",
+        description: "Yumpoint Minis is a direct-to-consumer offering where local homegrown brands can establish their own mini-storefront on our platform, engage with a broader user base and benefit from our technology-enabled logistics capabilities and back-end services such as discovery, check-out and payment."
+    },
+    {
+        name: "Lynks Logistics",
+        logo: "🚚",
+        description: "Lynks is engaged in the business of, inter alia, organisation and transport of goods, providing facilities for design and development of systems to manage such transportation and maintenance of a market on the internet for purpose of providing a platform for transports to avail such transportation services."
+    }
+]

@@ -146,12 +146,11 @@ body {
 }
 
 .res-card {
-  margin: 5px;
-  width: 250px;
+  margin: 10px;
+  width: 280px;
   height: 400px;
-  padding: 5px;
   border-radius: 10px;
-  background-color: rgb(232, 233, 235);
+  background-color: rgb(255, 247, 243);
 }
 
 .res-card:hover {
@@ -185,9 +184,8 @@ body {
   border-radius: 6px;
   height: 400px;
   overflow: hidden;
-  width: 250px;
-  margin: 5px;
-  padding: 5px;
+  width: 280px;
+  margin: 10px;
 
   .shimmerBG {
     background: #fff;
@@ -239,4 +237,42 @@ body {
 
 .res-menu {
   padding: 0 20px;
+}
+
+.about-heading {
+  text-align: center;
+}
+.about-heading > h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(251, 112, 5);
+}
+.about-heading > p {
+  font-size: 23px;
+  width: 1200px;
+  margin-left: 10%;
+}
+.about-heading > h2 {
+  margin-top: 50px;
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(251, 112, 5);
+}
+
+.business-card {
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgb(255, 247, 243);
+}
+
+.business-card-container {
+  margin: 20px 130px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
 }
