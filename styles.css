@@ -1,5 +1,6 @@
 * {
-  font-family: "Sunflower", serif;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -124,7 +125,7 @@ body {
 }
 
 .filter-btn {
-  width: 180px;
+  width: 200px;
   font-size: 15px;
   height: 35px;
   border: none;
