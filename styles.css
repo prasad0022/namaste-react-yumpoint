@@ -152,10 +152,11 @@ body {
   height: 400px;
   border-radius: 10px;
   background-color: rgb(255, 247, 243);
+  transition: transform 0.3s ease;
 }
 
 .res-card:hover {
-  border: 1px solid black;
+  transform: scale(1.05);
   cursor: pointer;
 }
 

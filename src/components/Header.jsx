@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { LOGO_URI } from "../utils/constants";
+import { useOnlineStatus } from "../utils/useOnlineStatus";
 
 const Header = () => {
   const [isClicked, setIsClicked] = useState(false);
+
+  const onlineStatus = useOnlineStatus();
 
   const handleClick = () => {
     setIsClicked((preVal) => {
@@ -37,6 +40,7 @@ const Header = () => {
           <button className="login-btn" onClick={handleClick}>
             {isClicked ? "Logout" : "Login"}
           </button>
+          <li style={{ fontSize: "14px" }}>{onlineStatus ? "🟢" : "🔴"}</li>
         </ul>
       </div>
     </div>
