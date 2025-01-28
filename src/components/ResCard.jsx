@@ -16,4 +16,16 @@ const ResCard = (props) => {
   );
 };
 
+export const withOfferCard = (ResCard) => {
+  return (props) => {
+    const offer = props.res.aggregatedDiscountInfoV3;
+    return (
+      <div>
+        <label className="res-card-label">{`${offer.header} ${offer.subHeader}`}</label>
+        <ResCard {...props} />
+      </div>
+    );
+  };
+};
+
 export default ResCard;

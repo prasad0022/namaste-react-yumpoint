@@ -11,7 +11,7 @@ const About = () => {
           Yumpoint is a new-age consumer-first organization offering an
           easy-to-use convenience platform, accessible through a unified app.
         </p>
-        <hr style={{ width: "600px", marginTop: "50px" }} />
+        <hr className="about-hr" />
         <h2>Our Businesses</h2>
       </div>
       <div className="business-card-container">

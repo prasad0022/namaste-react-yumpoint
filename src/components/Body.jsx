@@ -1,5 +1,5 @@
 import React from "react";
-import ResCard from "./ResCard";
+import ResCard, { withOfferCard } from "./ResCard";
 import ShimmerCard from "./ShimmerCard";
 import Search from "./Search";
 import { Link } from "react-router";
@@ -8,6 +8,8 @@ import { useRestaurants } from "../utils/useRestaurants"; // Custom Hook to get 
 const Body = () => {
   const { filterRestaurants, handleSearch, handleTopResFilter } =
     useRestaurants();
+
+  const ResCardWithOffer = withOfferCard(ResCard);
 
   return (
     <div className="body-container">
@@ -31,7 +33,11 @@ const Body = () => {
               className="res-card-link"
               key={res.info.id}
             >
-              <ResCard key={res.info.id} res={res.info} />
+              {res.info.aggregatedDiscountInfoV3 === undefined ? (
+                <ResCard key={res.info.id} res={res.info} />
+              ) : (
+                <ResCardWithOffer key={res.info.id} res={res.info} />
+              )}
             </Link>
           ))}
         </div>
