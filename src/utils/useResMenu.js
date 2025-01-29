@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 export const useResMenu = (resId) => {
 
     const [resInfo, setResInfo] = useState(null);
-    const [resMenu, setResMenu] = useState(null);
+    const [resCategories, setResCategories] = useState(null);
 
     useEffect(() => {
         fetchData();
@@ -16,12 +16,11 @@ export const useResMenu = (resId) => {
         const jsonData = await data.json();
 
         const resInfoData = jsonData?.data?.cards[2]?.card?.card?.info;
-        const resMenuData =
-            jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
-                ?.card?.card?.itemCards;
+        const resCategoriesData =
+            jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((card) => card?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
         setResInfo(resInfoData);
-        setResMenu(resMenuData);
+        setResCategories(resCategoriesData);
     };
 
-    return { resInfo, resMenu };
+    return { resInfo, resCategories };
 }

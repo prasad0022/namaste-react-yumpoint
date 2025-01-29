@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import ResMenu from "./ResMenu";
+import React from "react";
+import ResCategory from "./ResCategory";
 import { useParams } from "react-router";
 import { useResMenu } from "../utils/useResMenu"; // Custom Hook to get restaurant menu.
 
 const ResMenuPage = () => {
   const { resId } = useParams();
 
-  const { resInfo, resMenu } = useResMenu(resId);
+  const { resInfo, resCategories } = useResMenu(resId);
 
   return (
     <div className="res-menu-container" style={{ marginTop: "100px" }}>
-      {resInfo === null && resMenu === null ? (
+      {resInfo === null && resCategories === null ? (
         <h1>Loading....</h1>
       ) : (
         <>
@@ -21,9 +21,10 @@ const ResMenuPage = () => {
               {resInfo?.sla?.deliveryTime} min ◾ {resInfo?.avgRating} ⭐
             </p>
           </div>
-          <div className="menu-body">
-            {resMenu.map((menu) => (
-              <ResMenu key={menu.card.info.id} menu={menu.card.info} />
+          <hr style={{ marginTop: "30px" }} />
+          <div className="menu-category-container">
+            {resCategories.map((category, idex) => (
+              <ResCategory key={idex} data={category?.card?.card} />
             ))}
           </div>
         </>
