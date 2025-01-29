@@ -250,7 +250,7 @@ body {
 }
 
 .res-menu {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .menu-category-container {
@@ -258,16 +258,23 @@ body {
 }
 .menu-category {
   background-color: rgb(255, 247, 243);
-  margin: 10px 0;
+  margin: 20px 0;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .category-header {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  cursor: pointer;
 }
 .category-header > h1 {
   font-size: 18px;
   font-weight: 500;
+}
+
+.menu-body {
+  margin-top: 0;
+  background-color: white;
 }
 
 .about-heading {
