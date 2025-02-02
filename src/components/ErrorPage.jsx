@@ -4,8 +4,6 @@ import { useRouteError } from "react-router";
 const ErrorPage = () => {
   const err = useRouteError();
 
-  console.log(err);
-
   return (
     <div className="error-container">
       <h1>Oops !!!</h1>
