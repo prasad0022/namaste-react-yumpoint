@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router";
 import { LOGO_URI } from "../utils/constants";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   const onlineStatus = useOnlineStatus();
 
+  const { userName, setName } = useContext(UserContext);
+
   const handleClick = () => {
     setIsClicked((preVal) => {
       return !preVal;
     });
+    !isClicked ? setName("Prasad") : setName("Guest");
   };
 
   return (
@@ -40,7 +44,12 @@ const Header = () => {
           <button className="login-btn" onClick={handleClick}>
             {isClicked ? "Logout" : "Login"}
           </button>
-          <li style={{ fontSize: "14px" }}>{onlineStatus ? "🟢" : "🔴"}</li>
+          <li>
+            {userName}{" "}
+            <span style={{ fontSize: "9px", position: "absolute" }}>
+              {onlineStatus ? "🟢" : "🔴"}
+            </span>
+          </li>
         </ul>
       </div>
     </div>
