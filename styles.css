@@ -251,6 +251,20 @@ body {
 
 .res-menu {
   padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.res-menu-btn > button {
+  width: 80px;
+  height: 30px;
+  background-color: rgb(251, 112, 5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .menu-category-container {

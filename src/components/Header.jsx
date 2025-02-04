@@ -40,7 +40,7 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
-          <li>Cart</li>
+          <li>Cart (2)</li>
           <button className="login-btn" onClick={handleClick}>
             {isClicked ? "Logout" : "Login"}
           </button>
