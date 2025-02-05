@@ -333,3 +333,26 @@ body {
   align-content: center;
   justify-content: space-between;
 }
+
+.cart-container {
+  justify-items: center;
+}
+.cart-container > p {
+  font-size: 80px;
+}
+
+.cart-items-container {
+  margin-left: 50px;
+  padding: 30px;
+  width: 50%;
+}
+
+.cart-item {
+  margin: 5px;
+  background-color: rgb(255, 247, 243);
+  padding: 10px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

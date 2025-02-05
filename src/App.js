@@ -7,6 +7,9 @@ import ErrorPage from "./components/ErrorPage";
 import ResMenuPage from "./components/ResMenuPage"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/store/appStore";
+import CartPage from "./components/CartPage";
 
 // Lazy Loading :
 const About = lazy(() => import("./components/About"));
@@ -16,13 +19,14 @@ const App = () => {
     const [name, setName] = useState("Guest");
 
     return (
-        <UserContext.Provider value={{ userName: name, setName }}>
-            <div className="app">
-                <Header />
-                <Outlet />
-            </div>
-        </UserContext.Provider>
-
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ userName: name, setName }}>
+                <div className="app">
+                    <Header />
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 };
 
@@ -42,6 +46,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/cart",
+                element: <CartPage />
             },
             {
                 path: "/restaurant/:resId",

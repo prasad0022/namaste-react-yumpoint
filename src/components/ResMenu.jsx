@@ -1,6 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/store/cartSlice";
 
 const ResMenu = ({ menu }) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(addItem(menu));
+  };
+
   return (
     <div>
       <hr />
@@ -18,7 +26,7 @@ const ResMenu = ({ menu }) => {
           <p style={{ fontSize: "12px" }}>{menu.category}</p>
         </div>
         <div className="res-menu-btn">
-          <button>Add+</button>
+          <button onClick={handleClick}>Add+</button>
         </div>
       </div>
     </div>

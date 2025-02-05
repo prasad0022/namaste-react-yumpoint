@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { LOGO_URI } from "../utils/constants";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -11,6 +12,8 @@ const Header = () => {
 
   const { userName, setName } = useContext(UserContext);
 
+  // Subscribing to the Store using useSelector
+  const cartItems = useSelector((store) => store.cart.items);
   const handleClick = () => {
     setIsClicked((preVal) => {
       return !preVal;
@@ -40,7 +43,11 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
-          <li>Cart (2)</li>
+          <li>
+            <Link to="/cart" className="header-link">
+              Cart ({cartItems.length})
+            </Link>
+          </li>
           <button className="login-btn" onClick={handleClick}>
             {isClicked ? "Logout" : "Login"}
           </button>
