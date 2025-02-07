@@ -1,9 +1,16 @@
 import React from "react";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
+import { clearCart } from "../utils/store/cartSlice";
+import { useDispatch } from "react-redux";
 
 const CartPage = () => {
   const cartItems = useSelector((store) => store.cart.items);
+  const dispatch = useDispatch();
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
 
   return (
     <>
@@ -15,6 +22,9 @@ const CartPage = () => {
         </div>
       ) : (
         <div className="cart-items-container" style={{ marginTop: "120px" }}>
+          <div className="clear-cart">
+            <button onClick={handleClearCart}>Clear Cart</button>
+          </div>
           {cartItems.map((item, index) => (
             <CartItem key={index} item={item} />
           ))}

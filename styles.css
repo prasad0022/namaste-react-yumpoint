@@ -342,9 +342,20 @@ body {
 }
 
 .cart-items-container {
-  margin-left: 50px;
-  padding: 30px;
+  margin-left: 20%;
+  padding: 10px 30px;
   width: 50%;
+}
+
+.clear-cart > button {
+  margin: 5px;
+  background-color: rgb(251, 112, 5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
 }
 
 .cart-item {
@@ -355,4 +366,16 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.item-prize {
+  justify-content: center;
+}
+.item-prize > button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.item-prize > button:hover {
+  color: rgb(251, 112, 5);
 }
