@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 import { LOGO_URI } from "../utils/constants";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -29,24 +29,24 @@ const Header = () => {
       <div className="header-list">
         <ul>
           <li>
-            <Link to="/" className="header-link">
+            <NavLink to="/" className="header-link">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="header-link">
+            <NavLink to="/about" className="header-link">
               About Us
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact" className="header-link">
+            <NavLink to="/contact" className="header-link">
               Contact Us
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/cart" className="header-link">
+            <NavLink to="/cart" className="header-link">
               Cart ({cartItems.length})
-            </Link>
+            </NavLink>
           </li>
           <button className="login-btn" onClick={handleClick}>
             {isClicked ? "Logout" : "Login"}
